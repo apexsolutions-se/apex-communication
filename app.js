@@ -50,3 +50,29 @@ document.querySelectorAll('a[target="_blank"]').forEach((link) => {
     window.open(this.href, "_blank", "noopener,noreferrer");
   });
 });
+
+
+document.querySelectorAll('a[target="_blank"]').forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.stopPropagation();
+    window.open(this.href, "_blank", "noopener,noreferrer");
+  });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href");
+
+    if (targetId === "#") return;
+
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      e.preventDefault();
+      targetSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+});
