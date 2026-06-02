@@ -79,7 +79,7 @@ a {
 }
 
 .logo-wrap img {
-  width: 60px;
+  width: 80px;
 }
 
 .nav-links {
@@ -183,6 +183,17 @@ a {
   color: #00c8ff;
   font-size: 12px;
   font-weight: 900;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.eyebrow:hover {
+  background: rgba(0, 200, 255, 0.12);
+  border-color: #00c8ff;
+  transform: translateY(-2px);
 }
 
 h1 {
@@ -307,8 +318,8 @@ h1 span {
 }
 
 .feature-icon img {
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
 }
 
 .feature-card h3 {
@@ -416,7 +427,7 @@ h1 span {
 }
 
 .service-icon img {
-  width: 58px;
+  width: 46px;
 }
 
 .service-card h3 {
@@ -586,7 +597,7 @@ h1 span {
 
 .footer h4 {
   font-size: 12px;
-
+  color: #00c8ff;
   margin-bottom: 12px;
 }
 
@@ -601,6 +612,38 @@ h1 span {
 
 .social-icons img {
   width: 24px;
+}
+
+
+.live-dot {
+  width: 12px;
+  height: 12px;
+  background: #00c8ff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+/* pulsating ring */
+.live-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #00c8ff;
+  border-radius: 50%;
+  animation: pulse 1.6s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: .8;
+  }
+
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
 }
 
 /* TABLET */
