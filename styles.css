@@ -242,6 +242,9 @@ h1 span {
   font-weight: 800;
 
   white-space: nowrap;
+
+  position: relative;
+  z-index: 20;
 }
 
 .btn-primary {
