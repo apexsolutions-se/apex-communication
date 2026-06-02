@@ -51,14 +51,6 @@ document.querySelectorAll('a[target="_blank"]').forEach((link) => {
   });
 });
 
-
-document.querySelectorAll('a[target="_blank"]').forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.stopPropagation();
-    window.open(this.href, "_blank", "noopener,noreferrer");
-  });
-});
-
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener("click", function (e) {
     const targetId = this.getAttribute("href");
